@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p>
+     Опубликован {{ post.publish }} автором {{ post.author }}
+</p>
+{{ post.body|linebreaks }}
+<a href="{% url 'blog:post_list' %}">Обратно</a>
+<a href="{% url 'blog:post_delete' post.id %}">Удалить</a>
+{% endblock %}

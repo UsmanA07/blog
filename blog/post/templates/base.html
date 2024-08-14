@@ -6,12 +6,13 @@
 </head>
 <body>
 <div>
+    <h2>Мой блог</h2>
+    <a href="{% url 'blog:post_create' %}">Создать Пост</a>
+</div>
+<div>
     {% block content %}
     {% endblock %}
 </div>
-<div>
-    <h2>My blog</h2>
-    <p>This is my blog.</p>
-</div>
+
 </body>
 </html>
